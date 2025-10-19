@@ -1,0 +1,19 @@
+.header {
+  @apply tw-bg-primary tw-sticky tw-top-0 tw-z-50 tw-border-b tw-border-primary-light tw-px-6 tw-py-4;
+
+  &__container {
+    @apply tw-container tw-max-w-screen-xl tw-mx-auto;
+  }
+
+  &__nav {
+    @apply tw-flex tw-items-baseline tw-justify-between;
+
+    &-title {
+      @apply tw-text-2xl tw-font-family-bold tw-text-white;
+    }
+  }
+
+  &__menu {
+    @apply tw-space-x-4 tw-text-white;
+  }
+}

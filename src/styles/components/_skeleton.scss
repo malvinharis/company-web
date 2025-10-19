@@ -1,0 +1,37 @@
+.core-skeleton {
+  background-color: #D7DEE6;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(0.25turn, #D7DEE6, #FFFFFF, #D7DEE6),
+      linear-gradient(#D7DEE6, #FFFFFF),
+      radial-gradient(38px circle at 19px 19px, #FFFFFF 50%, #D7DEE6 51%),
+      linear-gradient(#FFFFFF, #FFFFFF);
+    background-repeat: no-repeat;
+    animation: shimmer 2s infinite;
+    content: '';
+  }
+
+  &-black {
+    background-color: #3C4157;
+    &::after {
+      background: linear-gradient(0.25turn, transparent, #181A22, transparent),
+      linear-gradient(#3C4157, #3C4157),
+      radial-gradient(38px circle at 19px 19px, #3C4157 50%, transparent 51%),
+      linear-gradient(#3C4157, #3C4157);
+    }
+  }
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

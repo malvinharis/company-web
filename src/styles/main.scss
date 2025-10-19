@@ -1,0 +1,55 @@
+@use "./abstracts/_abstract-dir";
+@use "./components/_components-dir";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scrollbar-width: none;
+}
+
+html,
+body {
+  @apply tw-bg-white tw-font-family-regular tw-p-0 tw-m-0 tw-scroll-smooth;
+}
+
+.main {
+  @apply tw-bg-gray-light tw-min-h-screen;
+
+  &__section {
+    @apply tw-py-20 tw-px-6;
+
+    &--primary {
+      @apply tw-bg-gradient-to-t tw-from-sky-500 tw-to-primary tw-text-white;
+    }
+
+    &--gray {
+      @apply tw-bg-gray-light;
+    }
+  }
+
+  &__container {
+    @apply tw-container tw-mx-auto tw-max-w-screen-xl;
+  }
+
+  &__title {
+    @apply tw-text-2xl xl:tw-text-3xl tw-font-family-bold tw-mb-8 tw-text-gray-dark;
+  }
+
+  &__description {
+    @apply tw-text-center sm:tw-text-left tw-gap-6 tw-grid sm:tw-grid-cols-4 sm:tw-content-end sm:tw-h-[30vh] xl:tw-h-[50vh] tw-relative;
+
+    &-background {
+      @apply tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover tw-z-0;
+    }
+
+    h1 {
+      @apply tw-leading-tight sm:tw-col-span-3 tw-font-family-bold tw-text-xl sm:tw-text-3xl xl:tw-text-5xl tw-m-0 tw-relative tw-z-10;
+    }
+
+    p {
+      @apply tw-text-base xl:tw-text-lg tw-font-family-regular tw-m-0 tw-relative tw-z-10;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.product {
+  &-list {
+    @apply tw-grid tw-gap-6 tw-grid-cols-2 sm:tw-grid-cols-3 xl:tw-grid-cols-5;
+  }
+
+  &-card {
+    @apply tw-overflow-hidden tw-cursor-pointer tw-transition-transform ;
+
+    &__image-wrapper {
+      @apply tw-relative tw-w-full tw-h-60 tw-bg-gray-light tw-rounded-md  tw-overflow-hidden tw-border tw-border-gray;
+    }
+
+    &__image {
+      @apply tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover;
+    }
+
+    &__content {
+      @apply tw-py-2 tw-space-y-1;
+    }
+
+    &__title {
+      @apply tw-text-gray-dark tw-line-clamp-2;
+    }
+
+    &__subtitle {
+      @apply tw-text-sm tw-text-secondary;
+    }
+  }
+}

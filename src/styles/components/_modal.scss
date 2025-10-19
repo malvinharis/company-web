@@ -1,0 +1,44 @@
+
+.modal {
+  @apply tw-fixed tw-inset-0 tw-z-50 tw-flex tw-items-center tw-justify-center;
+
+  &__overlay {
+    @apply tw-absolute tw-inset-0 tw-bg-black;
+    opacity: 0.75;
+  }
+
+  &__content {
+    @apply tw-relative tw-bg-white tw-rounded-lg tw-shadow-md tw-max-w-4xl tw-w-full tw-mx-4;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  &__close {
+    @apply tw-absolute tw-top-4 tw-right-4 tw-text-gray-dark tw-cursor-pointer tw-z-10;
+    @apply tw-w-8 tw-h-8 tw-flex tw-items-center tw-justify-center tw-bg-white tw-rounded-full tw-shadow-md;
+
+    &:hover {
+      @apply tw-bg-gray-light;
+    }
+  }
+
+  &__image-wrapper {
+    @apply tw-relative tw-w-full tw-bg-gray-light;
+  }
+
+  &__image {
+    @apply tw-w-full tw-h-auto;
+  }
+
+  &__info {
+    @apply tw-p-4 tw-space-y-1;
+  }
+
+  &__subtitle {
+  @apply tw-text-sm tw-text-secondary;
+}
+
+  &__title {
+    @apply tw-text-xl tw-text-gray-dark;
+  }
+}

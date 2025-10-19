@@ -1,0 +1,57 @@
+@keyframes animateToFade {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes animateToShowUp {
+  from {
+    bottom: -300px;
+    height: 0;
+  }
+
+  to {
+    bottom: 40px;
+    height: auto;
+  }
+}
+
+@keyframes animateToShowDown {
+  from {
+    bottom: 40px;
+    height: auto;
+  }
+
+  to {
+    bottom: -300px;
+    height: 0;
+  }
+}
+
+.notification-alert-container {
+  @apply tw-flex tw-flex-col tw-fixed tw-left-0 tw-right-0 tw-top-0 tw-h-auto;
+
+  margin: 0 auto;
+  height: auto;
+  z-index: 99;
+}
+
+.notification-alert {
+  @apply tw-bg-red-100 tw-flex tw-gap-3 tw-text-sm tw-shadow-md tw-px-4 tw-py-6 tw-w-full;
+
+  animation: animateToFade 0.4s linear;
+  -webkit-animation: animateToFade 0.4s linear;
+  z-index: 1010;
+
+  &--error {
+    @apply tw-bg-red-100 tw-text-red-600;
+  }
+
+  &--success {
+    @apply tw-bg-green-100 tw-text-green-600;
+  }
+}
