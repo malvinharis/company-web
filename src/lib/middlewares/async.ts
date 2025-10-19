@@ -8,7 +8,7 @@ import type { NextHandler } from 'next-connect';
 type AsyncHandler = (
   req: NextApiRequest,
   res: NextApiResponse,
-  next: NextHandler
+  next: NextHandler,
 ) => Promise<void> | void;
 
 const asyncHandler = (fn: AsyncHandler) => {
