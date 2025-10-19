@@ -3,7 +3,7 @@ import connect from 'next-connect';
 import statusCodes from 'http-status-codes';
 import Joi from 'joi';
 
-import type { Products } from '@interfaces/index';
+import type { ResponseData, ProductItem } from '@interfaces/index';
 
 import asyncHandler from '@lib/middlewares/async';
 import validate from '@lib/middlewares/validation';
@@ -22,12 +22,7 @@ export default connect()
     asyncHandler(
       async (
         req: any,
-        res: NextApiResponse<{
-          data: Products;
-          total: number;
-          page: number;
-          perPage: number;
-        }>,
+        res: NextApiResponse<ResponseData<(ProductItem & { image: string })[]>>,
       ) => {
         const data = await productService.getProducts(req.query);
 
