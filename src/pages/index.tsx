@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Image from 'next/image';
 
 import type { Product, Products } from '@interfaces/index';
 import {
@@ -17,6 +18,9 @@ import {
   ProductModal,
   ProductListSkeleton,
 } from '@components/index';
+
+import ImageHome from '@assets/images/img-home.png';
+import ImageBanner from '@assets/images/img-banner.png';
 
 const PER_PAGE = 10;
 
@@ -70,20 +74,34 @@ export default function Home() {
       <Header title="Company." />
 
       <Section variant="primary">
-        <div className="main__description">
-          <h1>
-            With a commitment to quality and trust, we deliver products that
-            make your shopping experience better
-          </h1>
-          <p>
-            We provide innovative products and services that help people find
-            what they love with ease.
-          </p>
+        <div className="main__content">
+          <div className="main__hero">
+            <h1>We create smart products that make life simpler</h1>
+            <p>
+              Discover products and great deals that make your everyday life
+              easier and more rewarding.
+            </p>
+          </div>
+          <Image src={ImageHome} alt="image-home" className="main__image" />
         </div>
       </Section>
 
       <Section variant="gray" id="products">
         <h2 className="main__title">Discover Our Products</h2>
+
+        <div className="main__banner">
+          <div className="main__banner-wrapper">
+            <Image
+              src={ImageBanner}
+              alt="image-banner"
+              className="main__banner-image"
+            />
+            <p className="main__banner-description">
+              Explore our curated selection of products and offers designed to
+              make shopping simple and enjoyable
+            </p>
+          </div>
+        </div>
 
         {isLoading && <ProductListSkeleton />}
 

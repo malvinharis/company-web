@@ -7,7 +7,7 @@
     @apply tw-overflow-hidden tw-cursor-pointer tw-transition-transform ;
 
     &__image-wrapper {
-      @apply tw-relative tw-w-full tw-h-60 tw-bg-gray-light tw-rounded-md  tw-overflow-hidden tw-border tw-border-gray;
+      @apply tw-relative tw-w-full tw-h-60 tw-bg-gray-light tw-rounded-2xl  tw-overflow-hidden tw-border tw-border-gray;
     }
 
     &__image {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import { alertType } from '@enums/notification.enum';
 import closeIconDanger from '@assets/icons/ic-16-nav-close-danger.svg';

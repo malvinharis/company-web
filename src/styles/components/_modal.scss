@@ -3,23 +3,16 @@
   @apply tw-fixed tw-inset-0 tw-z-50 tw-flex tw-items-center tw-justify-center;
 
   &__overlay {
-    @apply tw-absolute tw-inset-0 tw-bg-black;
-    opacity: 0.75;
+    @apply tw-absolute tw-inset-0 tw-bg-black tw-opacity-75;
   }
 
   &__content {
-    @apply tw-relative tw-bg-white tw-rounded-lg tw-shadow-md tw-max-w-4xl tw-w-full tw-mx-4;
-    max-height: 90vh;
-    overflow-y: auto;
+    @apply tw-relative tw-bg-white tw-rounded-2xl tw-shadow-md tw-max-w-4xl tw-w-full tw-max-h-[90vh] tw-mx-4 tw-overflow-y-auto;
   }
 
   &__close {
-    @apply tw-absolute tw-top-4 tw-right-4 tw-text-gray-dark tw-cursor-pointer tw-z-10;
-    @apply tw-w-8 tw-h-8 tw-flex tw-items-center tw-justify-center tw-bg-white tw-rounded-full tw-shadow-md;
+    @apply tw-absolute tw-top-4 tw-right-4  tw-size-8 tw-flex tw-items-center tw-justify-center tw-bg-white tw-rounded-full tw-shadow-md tw-text-gray-dark tw-cursor-pointer tw-z-10;
 
-    &:hover {
-      @apply tw-bg-gray-light;
-    }
   }
 
   &__image-wrapper {
